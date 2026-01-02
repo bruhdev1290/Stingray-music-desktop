@@ -4,27 +4,27 @@
     "version": "16.2.8+wvcus",
     "mirror": "https://github.com/castlabs/electron-releases/releases/download/v"
   },
-  "appId": "cider",
+  "appId": "stingray-music",
   "protocols": [
     {
-      "name": "Cider",
-      "schemes": ["ame", "cider", "itms", "itmss", "musics", "music"]
+      "name": "Stingray Music",
+      "schemes": ["stingray", "music"]
     }
   ],
   "extends": null,
   "files": ["**/*", "./src/**/*", "./resources/icons/icon.*"],
   "linux": {
     "target": ["AppImage", "deb", "snap", "rpm"],
-    "synopsis": "A new look into listening and enjoying music in style and performance. ",
+    "synopsis": "A music client for Stingray Music. ",
     "category": "AudioVideo",
-    "icon": "cider",
-    "executableName": "cider"
+    "icon": "stingray-music",
+    "executableName": "stingray-music"
   },
   "appx": {
-    "applicationId": "CiderAlpha",
-    "publisher": "CN=CiderCollective, OID.2.25.311729368913984317654407730594956997722=1",
-    "displayName": "Cider",
-    "identityName": "CiderCollective.CiderAlpha",
+    "applicationId": "StingrayMusic",
+    "publisher": "CN=StingrayMusicTeam",
+    "displayName": "Stingray Music",
+    "identityName": "StingrayMusicTeam.StingrayMusic",
     "backgroundColor": "transparent",
     "setBuildNumber": true
   },

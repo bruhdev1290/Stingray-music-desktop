@@ -1,19 +1,19 @@
 {
-  "name": "cider",
-  "applicationId": "Cider",
-  "productName": "Cider",
+  "name": "stingray-music",
+  "applicationId": "StingrayMusic",
+  "productName": "Stingray Music",
   "version": "1.6.4",
-  "description": "A new cross-platform Apple Music experience based on Electron and Vue.js written from scratch with performance in mind.",
+  "description": "A music client for Stingray Music based on Electron and Vue.js written from scratch with performance in mind.",
   "license": "AGPL-3.0",
   "exports": "./build/index.js",
   "main": "./build/index.js",
-  "author": "Cider Collective <development@cider.sh> (https://cider.sh)",
-  "repository": "github:ciderapp/Cider",
+  "author": "Stingray Music Team",
+  "repository": "github:bruhdev1290/Stingray-music-desktop",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/ciderapp/Cider/issues?q=is%3Aopen+is%3Aissue+label%3Abug"
+    "url": "https://github.com/bruhdev1290/Stingray-music-desktop/issues"
   },
-  "homepage": "https://cider.sh/",
+  "homepage": "https://github.com/bruhdev1290/Stingray-music-desktop",
   "buildResources": "resources",
   "scripts": {
     "bootstrap": "npx -y check-engine && pnpm i",
@@ -93,22 +93,14 @@
   },
   "fileAssociations": [
     {
-      "name": "Cider",
-      "mimeType": "x-scheme-handler/ame;x-scheme-handler/itms;x-scheme-handler/itmss;x-scheme-handler/musics;x-scheme-handler/music;",
+      "name": "Stingray Music",
+      "mimeType": "x-scheme-handler/stingray;x-scheme-handler/music;",
       "schemes": [
-        "ame",
-        "cider",
-        "itms",
-        "itmss",
-        "musics",
+        "stingray",
         "music"
       ],
       "protocols": [
-        "ame",
-        "cider",
-        "itms",
-        "itmss",
-        "musics",
+        "stingray",
         "music"
       ]
     }
@@ -117,18 +109,14 @@
     "electronDownload": {
       "mirror": "https://github.com/castlabs/electron-releases/releases/download/v"
     },
-    "appId": "cider",
+    "appId": "stingray-music",
     "afterPack": "./resources/afterPack.cjs",
     "afterSign": "./resources/notarize.cjs",
     "protocols": [
       {
-        "name": "Cider",
+        "name": "Stingray Music",
         "schemes": [
-          "ame",
-          "cider",
-          "itms",
-          "itmss",
-          "musics",
+          "stingray",
           "music"
         ]
       }
@@ -145,16 +133,16 @@
         "deb",
         "rpm"
       ],
-      "synopsis": "A new look into listening and enjoying music in style and performance. ",
+      "synopsis": "A music client for Stingray Music. ",
       "category": "AudioVideo",
-      "icon": "cider",
-      "executableName": "cider"
+      "icon": "stingray-music",
+      "executableName": "stingray-music"
     },
     "appx": {
-      "applicationId": "Cider",
-      "displayName": "Cider",
-      "identityName": "Cider",
-      "publisherDisplayName": "Cider Collective",
+      "applicationId": "StingrayMusic",
+      "displayName": "Stingray Music",
+      "identityName": "StingrayMusic",
+      "publisherDisplayName": "Stingray Music Team",
       "backgroundColor": "transparent",
       "setBuildNumber": true
     },

@@ -326,7 +326,7 @@ export class BrowserWindow {
     minWidth: 900,
     minHeight: 390,
     frame: false,
-    title: "Cider",
+    title: "Stingray Music",
     show: false,
     // backgroundColor: "#1E1E1E",
     titleBarStyle: "hidden",
