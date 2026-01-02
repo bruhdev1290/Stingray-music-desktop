@@ -9,7 +9,7 @@ import { Plugins } from "./base/plugins.js";
 import { BrowserWindow } from "./base/browserwindow.js";
 import { utils } from "./base/utils.js";
 
-const appName = 'sh.cider.classic';
+const appName = 'sh.stingraymusic.desktop';
 
 if (!app.isPackaged) {
   app.setPath('userData', join(app.getPath('appData'), `${appName}.dev`));
@@ -28,25 +28,25 @@ app.on("ready", async () => {
   await utils.initializeTranslations();
   Cider.ready(CiderPlug);
 
-  console.log("[Cider] Application is Ready. Creating Window.");
+  console.log("[StingrayMusic] Application is Ready. Creating Window.");
   if (!app.isPackaged) {
-    console.info("[Cider] Running in development mode.");
+    console.info("[StingrayMusic] Running in development mode.");
     // @ts-ignore
     (await import("vue-devtools")).default.install();
   }
   components.whenReady().then(async () => {
     const bw = new BrowserWindow();
-    console.log("[Cider] Creating Window.");
+    console.log("[StingrayMusic] Creating Window.");
     const win = await bw.createWindow();
 
     app.getGPUInfo("complete").then((gpuInfo) => {
       console.log(gpuInfo);
     });
 
-    console.log("[Cider][Widevine] Status:", components.status());
+    console.log("[StingrayMusic][Widevine] Status:", components.status());
     Cider.bwCreated();
     win.on("ready-to-show", () => {
-      console.debug("[Cider] Window is Ready.");
+      console.debug("[StingrayMusic] Window is Ready.");
       CiderPlug.callPlugins("onReady", win);
       if (!app.commandLine.hasSwitch("hidden")) {
         win.show();

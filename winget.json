@@ -4,13 +4,13 @@
     "version": "24.3.0+wvcus",
     "mirror": "https://github.com/castlabs/electron-releases/releases/download/v"
   },
-  "appId": "cider",
+  "appId": "stingray-music",
   "afterPack": "./resources/afterPack.cjs",
   "afterSign": "./resources/notarize.cjs",
   "protocols": [
     {
-      "name": "Cider",
-      "schemes": ["ame", "cider", "itms", "itmss", "musics", "music"]
+      "name": "Stingray Music",
+      "schemes": ["stingray", "music"]
     }
   ],
   "extends": null,
