@@ -1,6 +1,5 @@
 
-Stingray Music Desktop
-</h1>
+
 
 <p align="center">
 A cross-platform desktop music client for Stingray Music
