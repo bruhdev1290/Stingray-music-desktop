@@ -1,9 +1,4 @@
-<div align="center">
-<picture>
-    <img src="resources/icons/icon.png" width="128px">
-</picture>
-</div>
-<h1 align="center">
+
 Stingray Music Desktop
 </h1>
 
