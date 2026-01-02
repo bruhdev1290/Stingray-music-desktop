@@ -1,4 +1,4 @@
-// Apple Music Listen Now Page
+// Stingray Music Listen Now Page
 // URL : https://amp-api.music.apple.com/v1/me/recommendations?timezone=+00:00
 //  &with=friendsMix,library,social&art[social-profiles:url]=c
 //  &name=listen-now&art[url]=c,f&omit[resource]=autos

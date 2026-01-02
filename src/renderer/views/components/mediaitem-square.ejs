@@ -45,7 +45,7 @@
                   <div class="title"
                        :title="item.attributes?.name ?? (item.relationships?.contents?.data[0]?.attributes?.name ?? (item.attributes?.editorialNotes?.name ?? ''))"
                        v-if="item.attributes.artistNames == null || kind != 'card'" @click='app.routeView(item)'>
-                      <div class="item-navigate text-overflow-elipsis">{{ (item.attributes?.editorialElementKind == "394" && item.relationships?.contents?.data[0]?.attributes?.shortName != null ) ? item.relationships?.contents?.data[0]?.attributes?.shortName : (item.attributes?.name ? ((removeamtext ) ? item.attributes?.name.replace(/&nbsp;/g, ' ').replace(/Apple Music |^Apple |/g, '') : item.attributes?.name.replace(/&nbsp;/g, ' ')) :
+                      <div class="item-navigate text-overflow-elipsis">{{ (item.attributes?.editorialElementKind == "394" && item.relationships?.contents?.data[0]?.attributes?.shortName != null ) ? item.relationships?.contents?.data[0]?.attributes?.shortName : (item.attributes?.name ? ((removeamtext ) ? item.attributes?.name.replace(/&nbsp;/g, ' ').replace(/Stingray Music |^Stingray |/g, '') : item.attributes?.name.replace(/&nbsp;/g, ' ')) :
                           (item.relationships?.contents?.data[0]?.attributes?.name ??
                           (item.attributes?.editorialNotes?.name ?? ''))) }}
                       </div>

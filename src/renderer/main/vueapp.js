@@ -5313,7 +5313,7 @@ const app = new Vue({
               };
               let p = {
                 platformInfo: { requiresCDMAttachOnStart: !0, maxSecurityLevel: d, keySystemConfig: h },
-                appData: { serviceName: "Apple Music" },
+                appData: { serviceName: "Stingray Music" },
               };
               if (app.radiohls != null && app.radiohls.destroy != null) {
                 app.radiohls.destroy();

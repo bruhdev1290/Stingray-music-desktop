@@ -2,7 +2,7 @@
     <div class="content-inner about-page">
         <div class="row">
             <div class="col">
-                <img src="assets/banner.png" alt="Cider Logo" style="display:block;margin:0 auto;width: 500px;">
+                <img src="assets/banner.png" alt="Stingray Music Logo" style="display:block;margin:0 auto;width: 500px;">
                 <p style="text-align: center" id="version">{{ $root.getLz("term.version") }} {{ $root.version }}</p>
                 <p style="text-align: center"> {{$root.getLz('about.thanks')}} </p>
 
@@ -13,28 +13,11 @@
                     {{$root.getLz('term.rightsReserved')}}</p>
                 <hr>
                 <h3>{{$root.getLz('term.sponsor')}}</h3>
-                <button onclick="window.open('https://github.com/sponsors/ciderapp')"
-                        class="md-btn sponsorBtn githubBtn"><img src="./assets/github.svg" />GitHub Sponsors
-                </button>
-                <button onclick="window.open('https://ko-fi.com/cryptofyre')" class="md-btn sponsorBtn kofiBtn"><img
-                            src="./assets/ko_fi.svg" />Ko-fi
-                </button>
-                <button onclick="window.open('https://opencollective.com/ciderapp')"
-                        class="md-btn sponsorBtn opencollectiveBtn"><img src="./assets/open_collective.svg" />Open
-                    Collective
-                </button>
+                <p>This is a community fork. Visit the GitHub repository for more information.</p>
+                <hr>
                 <h3>{{$root.getLz('term.socials')}}</h3>
-                <button onclick="window.open('https://github.com/ciderapp/Cider')" class="md-btn sponsorBtn githubBtn">
+                <button onclick="window.open('https://github.com/bruhdev1290/Stingray-music-desktop')" class="md-btn sponsorBtn githubBtn">
                     <img src="./assets/github.svg" />{{$root.getLz('term.github')}}
-                </button>
-                <button onclick="window.open('https://discord.gg/applemusic')" class="md-btn sponsorBtn discordBtn"><img
-                            style="height: 26px;" src="./assets/discord.svg" />{{$root.getLz('term.discord')}}
-                </button>
-                <button onclick="window.open('https://twitter.com/UseCider')" class="md-btn sponsorBtn twitterBtn"><img
-                            src="./assets/twitter.svg" />Twitter
-                </button>
-                <button onclick="window.open('https://jq.qq.com/?_wv=1027&k=2VP4cdyo')" class="md-btn sponsorBtn qqBtn"><img
-                            src="./assets/qq.svg" />QQ
                 </button>
 
             </div>
@@ -69,10 +52,7 @@
                 <div class="col">
                     <h3></h3>
                     <h3>{{$root.getLz('term.contributors')}}</h3>
-                    <img class="md-contributors"
-                         style="cursor:pointer;width:100%;"
-                         onclick="window.open('https://github.com/ciderapp/Cider/graphs/contributors')"
-                         src="https://contrib.rocks/image?repo=ciderapp/Cider&columns=25" />
+                    <p>Based on the original Cider project. This is a community fork for Stingray Music.</p>
                 </div>
             </div>
         </div>

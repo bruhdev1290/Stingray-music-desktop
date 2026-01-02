@@ -68,7 +68,7 @@ function initMusicKit() {
   MusicKit.configure({
     developerToken: parsedJson.token,
     app: {
-      name: "Apple Music",
+      name: "Stingray Music",
       build: "1978.4.1",
       version: "1.0",
     },
