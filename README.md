@@ -13,6 +13,25 @@ A cross-platform desktop music client for Stingray Music
 
 ---
 
+## 📸 Screenshots
+
+> **Note:** Screenshots will be added here to showcase the application's interface and features.
+
+<!-- 
+Planned screenshots:
+- Main player interface
+- Library view with albums and songs
+- Settings and theme selection (including the new Koel theme)
+- Player controls and audio features
+-->
+
+For now, here's what you can expect:
+- **Modern UI**: Clean, intuitive interface designed for music lovers
+- **Theme Support**: Multiple built-in themes including the new Koel dark theme with orange accents
+- **Rich Features**: Full-featured music player with advanced controls and customization
+
+*Screenshots coming soon! To contribute screenshots, please see [Assets/screenshots/README.md](Assets/screenshots/README.md)*
+
 ## 🎵 About
 
 **Stingray Music Desktop** is a cross-platform desktop client for streaming music from Stingray Music. Built with modern web technologies including [Electron.js](https://electronjs.org), [Vue.js 2](https://vuejs.org), and [Webpack](https://webpack.js.org), this application provides a native desktop experience for enjoying your favorite music.
