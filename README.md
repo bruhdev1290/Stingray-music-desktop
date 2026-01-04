@@ -13,6 +13,25 @@ A cross-platform desktop music client for Stingray Music
 
 ---
 
+## 📸 Screenshots
+
+> **Note:** Screenshots will be added here to showcase the application's interface and features.
+
+<!-- 
+Planned screenshots:
+- Main player interface
+- Library view with albums and songs
+- Settings and theme selection (including the new Koel theme)
+- Player controls and audio features
+-->
+
+For now, here's what you can expect:
+- **Modern UI**: Clean, intuitive interface designed for music lovers
+- **Theme Support**: Multiple built-in themes including the new Koel dark theme with orange accents
+- **Rich Features**: Full-featured music player with advanced controls and customization
+
+*Screenshots coming soon! To contribute screenshots, please see [Assets/screenshots/README.md](Assets/screenshots/README.md)*
+
 ## 🎵 About
 
 **Stingray Music Desktop** is a cross-platform desktop client for streaming music from Stingray Music. Built with modern web technologies including [Electron.js](https://electronjs.org), [Vue.js 2](https://vuejs.org), and [Webpack](https://webpack.js.org), this application provides a native desktop experience for enjoying your favorite music.
@@ -82,6 +101,173 @@ pnpm run dist:win      # Windows
 pnpm run dist:linux    # Linux
 pnpm run dist          # Current platform
 ```
+
+## 📦 Building and Deploying
+
+### Windows
+
+#### Prerequisites
+- **Node.js** v18 or higher ([Download](https://nodejs.org/))
+- **pnpm** v9.15.0 or higher (Install via: `npm install -g pnpm`)
+- **Visual Studio Build Tools** or **Visual Studio 2019+** with "Desktop development with C++" workload
+- **Python 3.x** (required for node-gyp)
+- **Git** for cloning the repository
+
+#### Build Steps
+
+1. **Clone and Setup**
+   ```bash
+   git clone https://github.com/bruhdev1290/Stingray-music-desktop.git
+   cd Stingray-music-desktop
+   pnpm install
+   ```
+
+2. **Build the Application**
+   ```bash
+   pnpm run build
+   ```
+
+3. **Create Windows Installer**
+   ```bash
+   # Standard Windows build (creates NSIS installer)
+   pnpm run dist:win
+   ```
+   
+   The installer will be created in the `dist/` directory as `Stingray Music-Setup-{version}.exe`
+
+4. **Alternative Windows Builds**
+   ```bash
+   # Build for Windows Store (APPX package)
+   pnpm run winget
+   
+   # Build for Microsoft Store testing
+   pnpm run mstest
+   ```
+
+#### Deployment
+
+**Local Installation:**
+- Run the generated `.exe` installer from the `dist/` folder
+- The application will be installed to `%LOCALAPPDATA%\Programs\Stingray Music`
+
+**Distribution:**
+- Share the `.exe` installer file from `dist/` directory
+- For enterprise deployment, use the installer with silent install flags: `/S` (silent) or `/D=path` (custom directory)
+
+### Linux
+
+#### Prerequisites
+- **Node.js** v18 or higher
+- **pnpm** v9.15.0 or higher (Install via: `npm install -g pnpm`)
+- **Build essentials**: `build-essential`, `libssl-dev`, `rpm` (for RPM builds)
+- **Git** for cloning the repository
+
+#### Distribution-Specific Setup
+
+**Ubuntu/Debian:**
+```bash
+sudo apt update
+sudo apt install -y build-essential git nodejs npm python3
+sudo npm install -g pnpm
+```
+
+**Fedora/RHEL/CentOS:**
+```bash
+sudo dnf install -y gcc-c++ make git nodejs npm python3 rpm-build
+sudo npm install -g pnpm
+```
+
+**Arch Linux:**
+```bash
+sudo pacman -S base-devel git nodejs npm python
+sudo npm install -g pnpm
+```
+
+#### Build Steps
+
+1. **Clone and Setup**
+   ```bash
+   git clone https://github.com/bruhdev1290/Stingray-music-desktop.git
+   cd Stingray-music-desktop
+   pnpm install
+   ```
+
+2. **Build the Application**
+   ```bash
+   pnpm run build
+   ```
+
+3. **Create Linux Packages**
+   ```bash
+   # Standard Linux build (creates AppImage, .deb, and .rpm)
+   pnpm run dist:linux
+   ```
+   
+   The following packages will be created in the `dist/` directory:
+   - `Stingray Music-{version}.AppImage` - Universal Linux package
+   - `stingray-music_{version}_amd64.deb` - Debian/Ubuntu package
+   - `stingray-music-{version}.x86_64.rpm` - Fedora/RHEL package
+
+4. **Steam Deck Build**
+   ```bash
+   pnpm run steamdeck
+   ```
+
+#### Deployment
+
+**AppImage (All distributions):**
+```bash
+chmod +x Stingray\ Music-*.AppImage
+./Stingray\ Music-*.AppImage
+```
+
+**Debian/Ubuntu (.deb):**
+```bash
+sudo dpkg -i stingray-music_*.deb
+sudo apt-get install -f  # Install dependencies if needed
+```
+
+**Fedora/RHEL (.rpm):**
+```bash
+sudo rpm -i stingray-music-*.rpm
+# Or using dnf:
+sudo dnf install ./stingray-music-*.rpm
+```
+
+**Arch Linux (from source):**
+```bash
+# Create and install using makepkg
+makepkg -si
+```
+
+#### Flatpak Build
+
+For Flatpak distribution:
+```bash
+# Install flatpak-builder
+sudo apt install flatpak-builder  # Ubuntu/Debian
+sudo dnf install flatpak-builder  # Fedora
+
+# Build Flatpak
+flatpak-builder --repo=repo --force-clean build-dir flatpak/flathub.json
+```
+
+### Troubleshooting
+
+**Windows:**
+- If build fails with "node-gyp" errors, ensure Visual Studio Build Tools are installed
+- Run `npm config set msvs_version 2019` (or your VS version) if needed
+- Clear cache: `pnpm store prune` and retry
+
+**Linux:**
+- If FUSE errors occur with AppImage: `sudo apt install libfuse2` (Ubuntu 22.04+)
+- For permission issues: Ensure your user is in the required groups
+- Missing dependencies: Use `ldd` to check: `ldd dist/linux-unpacked/stingray-music`
+
+**Common Issues:**
+- `EACCES` permission errors: Try with `sudo` or fix npm permissions
+- Out of memory during build: Increase Node.js heap size: `export NODE_OPTIONS="--max-old-space-size=4096"`
+- TypeScript errors: Ensure you're using Node.js v18 or higher
 
 ## 🛠️ Development
 

@@ -1,0 +1,115 @@
+// Koel Theme Pack
+// Inspired by https://github.com/koel/koel
+// Dark theme with orange accent colors
+
+#app {
+  // Primary dark background colors
+  --color1: #181818;
+  --color2: #282828;
+  --baseColor: #181818;
+  
+  // Koel's signature orange accent color
+  --keyColor: #ff8c00;
+  --keyColor-hover: #ffa500;
+  
+  // Text colors for better contrast on dark background
+  --textColor: #e0e0e0;
+  --textColor-secondary: #b0b0b0;
+}
+
+// Override panel colors for darker appearance
+.menu-panel {
+  .menu-panel-body {
+    background-color: rgba(40, 40, 40, 0.95);
+    backdrop-filter: blur(32px) saturate(180%);
+    border: 1px solid rgba(255, 140, 0, 0.2);
+  }
+}
+
+// Style the app chrome with Koel's dark aesthetic
+.app-chrome:not(.chrome-bottom) {
+  background-color: #181818;
+  border-bottom: 1px solid #282828;
+}
+
+// Enhance media item cards with orange accents on hover
+.cd-mediaitem-square:hover {
+  .artwork-container {
+    border: 2px solid rgba(255, 140, 0, 0.4);
+  }
+}
+
+// Style buttons with Koel's orange accent
+.playback-button:hover {
+  background-color: rgba(255, 140, 0, 0.2);
+}
+
+// Floating headers with dark background
+.floating-header {
+  backdrop-filter: blur(32px) saturate(180%);
+  background: rgba(24, 24, 24, 0.9);
+  border-bottom: 1px solid rgba(255, 140, 0, 0.2);
+}
+
+// Sidebar items with orange accent on active state
+.app-sidebar-item.active,
+.app-sidebar-item:hover {
+  background-color: rgba(255, 140, 0, 0.15);
+  border-left: 3px solid #ff8c00;
+}
+
+// Enhance scrollbars with orange theme
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 140, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 140, 0, 0.6);
+}
+
+// Style modals with dark background
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+// Progress bars with orange accent
+.progress-bar,
+.time-progress-bar {
+  background-color: #ff8c00;
+}
+
+// Input fields with dark styling
+input,
+textarea,
+select {
+  background-color: #282828;
+  border: 1px solid #404040;
+  color: #e0e0e0;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #ff8c00;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.2);
+}
+
+// Enhance drawer with dark theme
+.app-drawer {
+  background: #202020;
+  border-left: 1px solid #282828;
+}
+
+// Style tooltips with orange accent
+.tooltip {
+  background-color: #282828;
+  border: 1px solid rgba(255, 140, 0, 0.3);
+  color: #e0e0e0;
+}
+
+// Add subtle orange glow to active elements
+button.active,
+.active-element {
+  box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+}
