@@ -17,7 +17,7 @@
   "buildResources": "resources",
   "scripts": {
     "bootstrap": "npx -y check-engine && pnpm i",
-    "build": "tsc && lessc ./src/renderer/style.less ./src/renderer/style.css",
+    "build": "npx tsc && npx lessc ./src/renderer/style.less ./src/renderer/style.css",
     "start": "npm run build && electron ./build/index.js",
     "dist": "npm run build && electron-builder --publish=never",
     "dist:win": "npm run build && electron-builder --win --publish=never",
@@ -89,6 +89,11 @@
     "typescript": "^5.7.2",
     "vue-devtools": "^5.1.4",
     "webpack": "~5.91.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "upnp-device-client": "https://codeload.github.com/vapormusic/node-upnp-device-client/tar.gz/371819a856573e3624768bd0a113ac6dc084053d"
+    }
   },
   "fileAssociations": [
     {
