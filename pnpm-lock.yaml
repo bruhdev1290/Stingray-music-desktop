@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  upnp-device-client: https://codeload.github.com/vapormusic/node-upnp-device-client/tar.gz/371819a856573e3624768bd0a113ac6dc084053d
+
 importers:
 
   .:
@@ -5114,8 +5117,8 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  upnp-device-client@git+https://git@github.com:vapormusic/node-upnp-device-client.git#371819a856573e3624768bd0a113ac6dc084053d:
-    resolution: {commit: 371819a856573e3624768bd0a113ac6dc084053d, repo: git@github.com:vapormusic/node-upnp-device-client.git, type: git}
+  upnp-device-client@https://codeload.github.com/vapormusic/node-upnp-device-client/tar.gz/371819a856573e3624768bd0a113ac6dc084053d:
+    resolution: {tarball: https://codeload.github.com/vapormusic/node-upnp-device-client/tar.gz/371819a856573e3624768bd0a113ac6dc084053d}
     version: 1.0.2
 
   upnp-mediarenderer-client@https://codeload.github.com/vapormusic/node-upnp-mediarenderer-client/tar.gz/d4856931500026eb6c4c67b3eb12c1c34755627e:
@@ -11482,7 +11485,7 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  upnp-device-client@git+https://git@github.com:vapormusic/node-upnp-device-client.git#371819a856573e3624768bd0a113ac6dc084053d:
+  upnp-device-client@https://codeload.github.com/vapormusic/node-upnp-device-client/tar.gz/371819a856573e3624768bd0a113ac6dc084053d:
     dependencies:
       concat-stream: 1.6.2
       debug: 2.6.9(supports-color@6.1.0)
@@ -11495,7 +11498,7 @@ snapshots:
     dependencies:
       debug: 2.6.9(supports-color@6.1.0)
       elementtree: 0.1.7
-      upnp-device-client: git+https://git@github.com:vapormusic/node-upnp-device-client.git#371819a856573e3624768bd0a113ac6dc084053d
+      upnp-device-client: https://codeload.github.com/vapormusic/node-upnp-device-client/tar.gz/371819a856573e3624768bd0a113ac6dc084053d
     transitivePeerDependencies:
       - supports-color
 
